@@ -1,0 +1,121 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+    <div class="container" id="qbody">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Question 1 </h5>
+                <div class="alert alert-primary" role="alert" id="qbox">
+                       <b>Total Number of vitamine in your body need is :</b>
+                </div>
+
+                <div class="form-check">
+
+                    <input class="btn btn-warning" type="button" id="q1a1"value="13">
+                    <input class="btn btn-warning" type="button" id="q1a2"value="5">
+                    <input class="btn btn-warning" type="button" id="q1a3"value="4">
+                    <input class="btn btn-warning" type="button" id="q1a4"value="10">
+                    <!--13-->
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="container" id="qbody">
+        <div class="card text-center" >
+            <div class="card-body">
+                <h5 class="card-title">Question 2 </h5>
+                <div class="alert alert-primary" role="alert" id="qbox">
+                    <b>How many lungs does the human body have?</b>
+                </div>
+
+                <div class="form-check">
+
+                    <input class="btn btn-warning" type="button" id="q2a1"value="4">
+                    <input class="btn btn-warning" type="button" id="q2a2"value="1">
+                    <input class="btn btn-warning" type="button" id="q2a3"value="2">
+                    <input class="btn btn-warning" type="button" id="q2a4"value="20">
+                    <!--2-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="qbody">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Question 3 </h5>
+                <div class="alert alert-primary" role="alert" id="qbox">
+                    <strong>The shape of DNA is known as?</strong>
+                </div>
+
+                <div class="form-check">
+
+                    <input class="btn btn-warning" type="button" id="q3a1"value="Helix">
+                    <input class="btn btn-warning" type="button" id="q3a2"value="Larynx">
+                    <input class="btn btn-warning" type="button" id="q3a3"value="A double helix">
+                    <input class="btn btn-warning" type="button" id="q3a4"value="Ribs">
+                    <!--A double helix-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="qbody">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Question 4 </h5>
+                <div class="alert alert-primary" role="alert" id="qbox">
+                    <strong>Water is made up of what two elements?</strong>
+                </div>
+
+                <div class="form-check">
+
+                    <input class="btn btn-warning" type="button" id="q4a1"value="Carbon and Potasium">
+                    <input class="btn btn-warning" type="button" id="q4a2"value="Argon and Helium ">
+                    <input class="btn btn-warning" type="button" id="q4a3"value="Hydrogen and oxygen">
+                    <input class="btn btn-warning" type="button" id="q4a4"value="Salt and Suger">
+                    <!--Hydrogen and oxygen-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 item text">
+                    <p class="copyright">Team Name © 2019</p>
+                </div>
+
+            </div>
+    </footer>
+    <script type="text/javascript">
+        [1, 2, 3, 4].forEach(function(j) {
+            [1, 2, 3, 4].forEach(function(i) {
+                document.querySelector("#q" + j + "a" + i).addEventListener("click", function() {
+                    switch (j) {
+                        case 1:
+                            answer_correct = (i == 1) ? true : false;
+                            break;
+                        case 2:
+                            answer_correct = (i == 3) ? true : false;
+                            break;
+                        case 3:
+                            answer_correct = (i == 3) ? true : false;
+                            break;
+                        case 4:
+                            answer_correct = (i == 3) ? true : false;
+                            break;
+                    }
+
+                    if (answer_correct == true)
+                        alert("Correct answer!");
+                    else
+                        alert("Incorrect answer!");
+                    
+                });
+            });
+        });
+        
+    </script>
+{% endblock content %}
